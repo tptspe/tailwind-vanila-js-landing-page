@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="42px" height="35px" viewBox="0 0 42 35" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="sliders" transform="translate(1 1)">
+    <path d="M0 12.7273L0 0" transform="translate(5.4545455 20)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 12.7273L0 0" transform="translate(5.4545455 0)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 16.3636L0 0" transform="translate(20 16.363636)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 9.09091L0 0" transform="translate(20 0)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 9.09091L0 0" transform="translate(34.545456 23.636364)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 16.3636L0 0" transform="translate(34.545456 0)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 0L10.9091 0" transform="translate(0 20)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 0L10.9091 0" transform="translate(14.545455 9.090909)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 0L10.9091 0" transform="translate(29.09091 23.636364)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

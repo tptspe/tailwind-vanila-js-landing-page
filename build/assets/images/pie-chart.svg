@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="41px" height="41px" viewBox="0 0 41 41" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="pie-chart" transform="translate(1 1)">
+    <path d="M36.5922 24.8762C33.2586 32.7598 25.0757 37.4515 16.588 36.3458C8.10029 35.2401 1.39252 28.6085 0.189937 20.1339C-1.01264 11.6594 3.58534 3.42343 11.4303 0" transform="translate(0 1.5809524)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M19.0476 19.0476C19.0476 13.9959 17.0408 9.15104 13.4687 5.57892C9.89658 2.0068 5.05174 4.22942e-16 0 0L0 19.0476L19.0476 19.0476Z" transform="translate(19.04939 0)" id="Shape" fill="none" fill-rule="evenodd" stroke="#22B3F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
