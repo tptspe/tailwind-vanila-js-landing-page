@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="42px" height="38px" viewBox="0 0 42 38" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="pocket" transform="translate(1 1)">
+    <path d="M4 0L36 0C38.2091 0 40 1.79086 40 4L40 16C40 27.0457 31.0457 36 20 36C14.6957 36 9.60859 33.8929 5.85786 30.1421C2.10714 26.3914 4.44089e-16 21.3043 0 16L0 4C-4.44089e-16 1.79086 1.79086 0 4 0Z" id="Shape" fill="none" fill-rule="evenodd" stroke="#222D4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 0L8 8L16 0" transform="translate(12 14)" id="Shape" fill="none" fill-rule="evenodd" stroke="#222D4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
