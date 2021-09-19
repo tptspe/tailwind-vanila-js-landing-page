@@ -25,6 +25,9 @@
       .bottomGradient {
         background: linear-gradient(90deg, #4C4C65 0%, #FF6B58 100%);
       }
+      .footerBgGradient {
+        background: linear-gradient(90deg, #1E1E47 0%, #1C1C42 100%);
+      }
       .side-menu li {
         position: relative;
       }
@@ -44,6 +47,22 @@
         border-bottom: 1px solid #214da6;
         -moz-transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
+      }
+
+      .tab-content {
+        max-height: 0;
+        -webkit-transition: max-height .35s;
+        -o-transition: max-height .35s;
+        transition: max-height .35s;
+      }
+         /* :checked - resize to full height */
+      .tab input:checked ~ .tab-content {
+        max-height: 100vh;
+      }
+      
+      .tab input[type=radio]:checked + label {
+        background-color: #214DA6; /*.bg-indigo*/
+        color: #fff; /*.text-grey-lightest*/
       }
     </style>
   </head>
@@ -105,15 +124,15 @@
     <div class="mt-24 relative">
       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center z-10">
         <!--Left Col-->
-        <div class="flex flex-col w-full justify-center items-start text-center md:text-left">
+        <div class="flex flex-col w-full justify-center items-start text-left z-10">
           <!-- <p class="uppercase tracking-loose w-full">What business are you?</p> -->
-          <h1 class="my-4 text-5xl font-regular leading-tight text-skyBlue-dark font-roboto">
-           Enabling Europe's <br /> top freelancers with <br /> Enterprise Hypercare Program
+          <h1 class="my-4 text-xl md:text-5xl font-regular leading-tight text-skyBlue-dark font-roboto">
+           Enabling Europe's <br class="hidden sm:block" /> top freelancers with <br class="hidden sm:block" /> Enterprise Hypercare Program
           </h1>
           
-          <p class="leading-normal text-2xl mt-10 mb-8 text-skyBlue-dark font-light">
-            Proteamsbuilds and manages digital teams with Europe's<br />
-            top freelancers and delivers custom-made / already-built<br />
+          <p class="leading-normal md:text-2xl mt-10 mb-8 text-skyBlue-dark font-light">
+            Proteamsbuilds and manages digital teams with Europe's<br class="hidden sm:block" />
+            top freelancers and delivers custom-made / already-built<br class="hidden sm:block" />
             digital products for the leading enterprises
           </p>
           <button class="mx-auto z-50 lg:mx-2 bg-skyBlue text-white rounded-full mt-0 lg:mt-0 py-2 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:bg-skyBlue-light text-lg"
@@ -126,20 +145,20 @@
           <img class="w-full md:w-4/5 z-50" src="hero.png" />
         </div> -->
       </div>
-      <div class="absolute right-0 top-0">
-        <img src="assets/images/top_hexagon.png" class="w-4/5" alt="top_hexagon" />
+      <div class="mt-10 sm:mt-20 lg:mt-0 lg:absolute right-0 top-0 z-0 px-3">
+        <img src="assets/images/top_hexagon.png" class="w-4/5 mx-auto lg:mx-0" alt="top_hexagon" />
       </div>
     </div>
-    <div class="relative -mt-11 lg:-mt-24">
+    <div class="relative -mt-11 lg:-mt-12 hidden md:block">
       <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center" >
         <img src="assets/images/small-hexagon.svg"  class="ml-40" alt="small-hexagon" />
       </div>
       
     </div>
-    <section class="bg-group2-pattern bg-cover bg-center border-b py-28 -mt-24" >
+    <section class="bg-group2-pattern bg-cover bg-center border-b py-4 sm:py-28 mt-10 sm:-mt-24" >
       <!-- <div class="container max-w-7xl mx-auto m-8"> -->
       <div class="container mx-auto flex flex-wrap pt-4 pb-12 px-16">
-        <h1 class="w-full my-6 font-roboto text-5xl font-light leading-tight text-white">
+        <h1 class="w-full my-6 font-roboto text-xl sm:text-5xl font-light leading-tight text-white">
           Lorem ipsum dolor… <br />
           Lorem ipsum dolor sit amet vivamus.
         </h1>
@@ -484,92 +503,74 @@
       </div>
     </section>
     
-    <section class="bg-white pt-8">
-      <div class="container mx-auto flex flex-wrap pt-4">
-        <div class="grid grid-cols-3 gap-4 w-full my-4">
-          <h1 class="col-span-2 w-full font-roboto my-2 text-4xl font-light leading-tight text-gray-800">
+    <section class="bg-white pt-8 px-3">
+      <div class="container mx-auto flex flex-wrap pt-0 sm:pt-4">
+        <div class="grid sm:grid-cols-3 gap-4 w-full my-4">
+          <h1 class="col-span-2 w-full font-roboto my-2 text-xl sm:text-4xl font-light leading-tight text-gray-800">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie tristique mi, et sodales sed.
           </h1>
-          <div class="">
+          <div class="hidden sm:block">
             <img src="assets/images/hexagon-right-small.png" alt="right-small hexagon" />
           </div>
         </div>
       </div>
     </section>  
 
-    <section class="relative -mt-24">
+    <section class="relative mt-0 md:-mt-24 px-3 ">
       <div class="bg-big-hexagon absolute left-0 h-full w-full bg-no-repeat z-0">
         &nbsp;
       </div>
-      <div class="container mx-auto flex flex-wrap pt-4 pb-8 relative z-30">    
+      <div class="container mx-auto flex flex-wrap pt-7 pb-0 sm:pb-8 relative z-30">    
         
-        <div class="w-full md:w-1/2  py-16 flex flex-col flex-grow flex-shrink">
+        <div class="w-full md:w-1/2 py-9 sm:py-16 flex flex-col flex-grow flex-shrink">
+          <div class="block md:hidden mb-6 sm:mb-0">
+            <img src="assets/images/sm-team.png" class="mx-auto" alt="right mask" />
+          </div>
           <div class="overflow-hidden">
             
-            <div class="divide-y-2 divide-skyBlue-dark divide-dashed">
-              <p class="w-full font-roboto text-skyBlue-dark text-4xl font-light md:text-4xl mt-8 mb-10 ">
-                Lorem ipsum dolor sit amet, <br />
+            <div class="divide-y-2 divide-skyBlue-dark divide-none sm:divide-dashed">
+              <p class="w-full font-roboto text-skyBlue-dark text-xl font-light md:text-4xl my-4 sm:mt-8 sm:mb-10 ">
+                Lorem ipsum dolor sit amet, <br class="hidden sm:block" />
                 consectetur adipiscing elit non.
               </p>
-              <p class="w-full text-xl font-normal font-roboto pt-8" style="color:#181839">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc <br />
-                vitae congue dolor. Curabitur convallis posuere dolor rhoncus <br />
-                consequat. Duis iaculis posuere dolor, sit amet porta odio <br />
+              <p class="w-full text-base md:text-xl font-normal font-roboto pt-3 sm:pt-8" style="color:#181839">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc <br class="hidden sm:block" />
+                vitae congue dolor. Curabitur convallis posuere dolor rhoncus <br class="hidden sm:block" />
+                consequat. Duis iaculis posuere dolor, sit amet porta odio <br class="hidden sm:block" />
                 volutpat id. Aenean convallis leo id purus cursus dapibus nam.
               </p>
             </div>
-            
-            
           </div>
           
         </div>
-        <!-- <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                xGETTING STARTED
-              </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
-                Lorem ipsum dolor sit amet.
-              </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-              </p>
-            </a>
-          </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-center">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                Action
-              </button>
-            </div>
-          </div>
-        </div> -->
        
       </div>
-      <div class="absolute right-0 top-20 z-30">
+      <div class="hidden md:block absolute right-0 top-20 z-30">
         <img src="assets/images/team.png" alt="right mask" />
       </div>
 
-      <div class="absolute left-0 top-220 z-30">
+      <div class="hidden md:block absolute left-0 top-220 z-30">
         <img src="assets/images/left-card.svg" alt="right mask" />
       </div>
       <div class="container mx-auto flex flex-wrap pt-0 pb-12 relative z-20">    
-        <div class="w-full  py-3.5 flex flex-col flex-grow flex-shrink">
+        <div class="md:hidden mx-auto">
+          <img src="assets/images/sm-left-card.png" alt="right mask" />
+        </div>
+        <div class="w-full py-3.5 flex flex-col flex-grow flex-shrink">
           
-            <div class="divide-y-2 divide-skyBlue-dark divide-dashed py-0">
-              <div class="flex justify-end mb-8 ">
-                <p class="font-roboto text-skyBlue-dark text-3xl font-light pr-32">
-                  Lorem ipsum dolor sit amet, <br />
-                  consectetur adipiscing elit.<br />
+            <div class="divide-y-2 divide-skyBlue-dark divide-none  sm:divide-dashed py-0">
+              <div class="flex sm:justify-end mt-5 sm:mt-0 mb-4 sm:mb-8 ">
+                <p class="font-roboto text-skyBlue-dark text-xl md:text-3xl font-light pr-32">
+                  Lorem ipsum dolor sit amet, <br class="hidden sm:block" />
+                  consectetur adipiscing elit.<br class="hidden sm:block" />
                   Integer non velit.
                 </p>
               </div>
-              <div class="flex justify-end pt-10">
+              <div class="flex sm:justify-end pt-0 sm:pt-10">
                 <p class="text-base font-normal font-roboto pr-24" style="color:#181839">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc <br />
-                  vitae congue dolor. Curabitur convallis posuere dolor rhoncus <br />
-                  consequat. Duis iaculis posuere dolor, sit amet porta odio <br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc <br class="hidden sm:block" />
+                  vitae congue dolor. Curabitur convallis posuere dolor rhoncus <br class="hidden sm:block" />
+                  consequat. Duis iaculis posuere dolor, sit amet porta odio<br class="hidden sm:block" />
                   volutpat id. Aenean convallis leo id purus cursus dapibus nam.
                 </p>
               </div>
@@ -578,11 +579,11 @@
        
       </div>
 
-      <div class="container mx-auto flex flex-wrap pt-0 pb-12 relative z-20">    
-        <div class="font-roboto text-skyBlue-dark text-3xl pt-14 pb-10" >
+      <div class="container mx-auto block md:flex flex-wrap pt-0 pb-0 md:pb-12 relative z-20">    
+        <div class="font-roboto text-skyBlue-dark text-xl md:text-3xl pt-14 pb-10" >
           Lorem ipsum dolor sit amet.<br />
         </div>
-        <div class="grid grid-cols-4 w-full my-2">
+        <div class="hidden md:grid grid-cols-4 w-full my-2">
           <div class="border-l border-primary pl-8 ">
             <img src="assets/images/pocket.svg" class="w-10 h-10" alt="pocket" />
             <div class="font-roboto text-grey-dark text-lg pt-6 pb-4">Lorem ipsum dolor sit amet<br />&nbsp;</div>
@@ -639,15 +640,90 @@
           </div>
           
         </div>
+        <div class="overflow-x-hidden block md:hidden">
+          <div class="block md:hidden slider2 w-full relative md:mt-12">
+            <div class="slide slide-1 w-full block absolute active border-l border-primary pl-8">
+              
+                <img src="assets/images/pocket.svg" class="w-10 h-10" alt="pocket" />
+                <div class="font-roboto text-grey-dark text-lg pt-6 pb-4">Lorem ipsum dolor sit amet<br />&nbsp;</div>
+                <div class="font-roboto text-skyBlue-dark text-sm font-light relative ">
+                  Lorem ipsum dolor sit amet, <br />
+                  consectetur adipiscing elit.<br /> 
+                  Cras feugiat metus sed eros<br /> 
+                  condimentum, ac pretium massa<br />
+                  placerat.
+                  <div class="absolute border-l h-full border-skyBlue-dark top-0 -left-8" style="margin-left:-1px">&nbsp;</div>
+              
+              </div>
+            </div>
+            <div class="slide slide-2 w-full absolute border-l border-primary pl-8">
+              <img src="assets/images/sliders.svg" class="w-10 h-10" alt="pocket" />
+              <div class="font-roboto text-grey-dark text-lg pt-6 pb-4">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur
+              </div>
+              <div class="font-roboto text-skyBlue-dark text-sm font-light relative">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipiscing elit.<br />
+                Cras feugiat metus sed eros<br />
+                condimentum.
+                <div class="absolute border-l h-full border-sky top-0 -left-8" style="margin-left:-1px">&nbsp;</div>
+              </div>
+            </div>
+            <div class="slide slide-3 w-full absolute border-l border-primary pl-8">
+              <img src="assets/images/clock.svg" class="w-10 h-10" alt="pocket" />
+              <div class="font-roboto text-grey-dark text-lg pt-6 pb-4">
+                Lorem ipsum dolor <br />sit amet, consectetur
+              </div>
+              <div class="font-roboto text-skyBlue-dark text-sm font-light relative">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipiscing elit. Cras<br />
+                feugiat metus sed eros<br />
+                condimentum, ac pretium massa<br />
+                placerat. Ut ultricies egestas libero<br />
+                sed finibus dignissim.
+                <div class="absolute border-l h-full border-skyBlue-dark top-0 -left-8" style="margin-left:-1px">&nbsp;</div>
+              </div>
+            </div>
+            <div class="slide slide-4 w-full absolute border-l border-primary pl-8">
+              <img src="assets/images/pie-chart.svg" class="w-10 h-10" alt="pocket" />
+              <p class="font-roboto text-grey-dark text-lg pt-6 pb-4">
+                Lorem ipsum dolor sit amet<br />&nbsp;
+              </p>
+              <div class="font-roboto text-skyBlue-dark text-sm font-light relative">
+                Lorem ipsum dolor sit amet,<br />
+                consectetur adipiscing elit.<br />
+                Cras feugiat metus sed eros<br />
+                condimentum.
+                <div class="absolute border-l h-full border-sky top-0 -left-8" style="margin-left:-1px">&nbsp;</div>
+              </div>
+            </div>
+        
+          </div>
+          <div class="slider2-buttons flex justify-center" >
+            <div class="prev mr-8">
+              <a href="javascript:void(0)" class="bg-blue-dark border border-blue-light hover:bg-blue-light text-white text-xl text-center py-2 px-3 rounded-full h-10 w-10 inline-flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </a>
+            </div>
+            <div class="next">
+              <a href="javascript:void(0)" class="bg-blue-dark border border-blue-light hover:bg-blue-light text-white  text-center py-2 px-3 rounded-full h-10 w-10 inline-flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={5} d="M9 5l7 7-7 7" />
+                </svg>
+              </a></div>
+          </div>
       </div>
     </section>
 
     <section class="bg-white py-8">
       <div class="container mx-auto px-2 pt-4 pb-12 text-skyBlue-dark">
-        <h1 class="font-roboto text-skyBlue-dark text-4xl pb-12 text-center">
+        <h1 class="font-roboto text-skyBlue-dark text-xl md:text-4xl pb-12 text-center">
           Lorem ipsum / Dolor
         </h1>
-        <div class="grid grid-cols-4 w-full my-2 gap-8 ">
+        <div class="grid-cols-4 w-full my-2 gap-8 hidden md:grid">
           <div class="border border-primary bg-darkBlue p-9 text-white cursor-pointer">
             <div class="font-roboto  text-5xl pb-3 ">
               1500+
@@ -684,7 +760,66 @@
               Ipsum
             </div>
           </div>
-      </div>
+      
+        </div>
+
+        <div class="overflow-x-hidden block md:hidden">
+          <div class="block md:hidden slider3 w-full relative md:mt-12">
+            <div class="slide slide-1 w-full block absolute active border border-primary bg-darkBlue p-9 text-white cursor-pointer">
+              <div class="font-roboto  text-5xl pb-3 ">
+                1500+
+              </div>
+              <div class="font-roboto  text-2xl leading-7 pb-6 ">
+                Lorem <br />
+                Ipsum
+              </div>
+            </div>
+            <div class="slide slide-2 w-full block absolute border-sky-light bg-grey-light p-9 text-darkBlue-light cursor-pointer">
+              <div class="font-roboto  text-5xl pb-3 ">
+                250+
+              </div>
+              <div class="font-roboto  text-2xl leading-7 pb-6 ">
+                Lorem <br />
+                Ipsum
+              </div>
+            </div>
+            <div class="slide slide-2 w-full block absolute border-sky-light bg-grey-light p-9 text-darkBlue-light cursor-pointer">
+              <div class="font-roboto  text-5xl pb-3 ">
+                100+
+              </div>
+              <div class="font-roboto  text-2xl leading-7 pb-6 ">
+                Lorem <br />
+                Ipsum
+              </div>
+            </div>
+            <div class="slide slide-2 w-full block absolute border-sky-light bg-grey-light p-9 text-darkBlue-light cursor-pointer">
+              <div class="font-roboto  text-5xl pb-3 ">
+                100+
+              </div>
+              <div class="font-roboto  text-2xl leading-7 pb-6 ">
+                Lorem <br />
+                Ipsum
+              </div>
+            </div>
+            
+        
+          </div>
+          <div class="slider3-buttons flex justify-center" >
+            <div class="prev mr-8">
+              <a href="javascript:void(0)" class="bg-blue-dark border border-blue-light hover:bg-blue-light text-white text-xl text-center py-2 px-3 rounded-full h-10 w-10 inline-flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </a>
+            </div>
+            <div class="next">
+              <a href="javascript:void(0)" class="bg-blue-dark border border-blue-light hover:bg-blue-light text-white  text-center py-2 px-3 rounded-full h-10 w-10 inline-flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={5} d="M9 5l7 7-7 7" />
+                </svg>
+              </a></div>
+          </div>
+        </div>
       <div class="font-roboto text-blue text-xl p-10 text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi<br />
         libero, faucibus feugiat arcu sit amet, rhoncus cras amet.
@@ -745,29 +880,29 @@
     </section>
     <!-- Change the colour #f8fafc to match the previous section colour -->
     
-    <section class="py-6 bg-double-hexagon bg-cover bg-white" >
+    <section class="py-6 bg-double-hexagon bg-cover bg-white bg-center" >
       <div class="container mx-auto overflow-x-hidden">
-        <div class="grid grid-cols-2 w-full my-2 ">
+        <div class="block md:grid grid-cols-2 w-full my-2 ">
           <div class=" grid md:grid-cols-4 w-full my-2 gap-2 text-center">
             <div class="hidden md:grid justify-end">
               <img src="assets/images/left_lines.png" alt='' class="block mx-auto my-auto"/>
             </div>
-            <div class="md:col-span-2 text-4xl text-skyBlue-dark"><h1>Lorem Ipsum Do</h1></div>
+            <div class="md:col-span-2 text-xl md:text-4xl text-skyBlue-dark"><h1>Lorem Ipsum Do</h1></div>
             <div class="hidden md:grid justify-start">
               <img src="assets/images/right_lines.png" alt='' class="block mx-auto my-auto" />
             </div>
           </div>
-          <div>
+          <div class="hidden mb:block">
             &nbsp;
           </div>
           
         </div>
-        <div class="slider w-full relative mt-12">
-          <div class="slide slide-1 w-full grid grid-cols-3 gap-6 absolute active">
-            <div class="col-span-2 max-w-2xl">
+        <div class="slider w-full relative md:mt-12">
+          <div class="slide slide-1 w-full block md:grid grid-cols-3 gap-6 absolute active">
+            <div class="col-span-2 max-w-2xl mx-3 md:mx-0">
               <img src="assets/images/img-1.jpg" class="w-full" alt="slide-1">
             </div>            
-            <div>
+            <div class="hidden md:block">
               <div class="font-roboto text-xl text-white">
                 Lorem ipsum dolor sit amet,<br />
                 consectetur adipiscing elit.<br />
@@ -785,12 +920,31 @@
                 </div>
               </div>
             </div>
+            <div class="md:hidden block mx-3 pt-10 ">
+              <div class="grid grid-cols-3 gap-3">
+                <div>
+                  <img src="assets/images/profile_pic.png" class="w-32" alt="">
+                </div>
+                <div class="col-span-2 font-roboto text-white justify-end flex-col flex">                  
+                  Lorem ipsum dolor sit amet,<br />
+                  consectetur adipiscing elit.<br />
+                  Aenean mi libero, faucibus<br />
+                  feugiat arcu sit amet, <br />
+                  rhoncus cras amet.
+                </div>
+                
+              </div>
+              <div class="font-roboto text-lg text-white text-center">
+                <p class="text-xl">Lorem Ipsum</p>
+                <p class="text-base">Lorem ipsum dolor sit.</p>
+              </div>
+            </div>
           </div>
-          <div class="slide slide-2 w-full grid grid-cols-3 gap-6 absolute">
-            <div class="col-span-2 max-w-2xl">
+          <div class="slide slide-2 w-full block md:grid grid-cols-3 gap-6 absolute">
+            <div class="col-span-2 max-w-2xl mx-3 md:mx-0">
               <img src="assets/images/img-2.jpg" class="w-full" alt="slide-1">
             </div>            
-            <div>
+            <div class="hidden md:block">
               <div class="font-roboto text-xl text-white">
                 Lorem ipsum dolor sit amet,<br />
                 consectetur adipiscing elit.<br />
@@ -808,12 +962,31 @@
                 </div>
               </div>
             </div>
+            <div class="md:hidden block mx-3 pt-10 ">
+              <div class="grid grid-cols-3 gap-3">
+                <div>
+                  <img src="assets/images/profile_pic.png" class="w-32" alt="">
+                </div>
+                <div class="col-span-2 font-roboto text-white justify-end flex-col flex">                  
+                  Lorem ipsum dolor sit amet,<br />
+                  consectetur adipiscing elit.<br />
+                  Aenean mi libero, faucibus<br />
+                  feugiat arcu sit amet, <br />
+                  rhoncus cras amet.
+                </div>
+                
+              </div>
+              <div class="font-roboto text-lg text-white text-center">
+                <p class="text-xl">Lorem Ipsum</p>
+                <p class="text-base">Lorem ipsum dolor sit.</p>
+              </div>
+            </div>
           </div>
-          <div class="slide slide-3 w-full grid grid-cols-3 gap-6 absolute">
+          <div class="slide slide-3 w-full block md:grid grid-cols-3 gap-6 absolute">
             <div class="col-span-2 max-w-2xl">
               <img src="assets/images/img-3.jpg" class="w-full" alt="slide-1">
             </div>            
-            <div>
+            <div class="hidden md:block">
               <div class="font-roboto text-xl text-white">
                 Lorem ipsum dolor sit amet,<br />
                 consectetur adipiscing elit.<br />
@@ -829,6 +1002,25 @@
                 <div>
                   <img src="assets/images/profile_pic.png" class="w-48" alt="">
                 </div>
+              </div>
+            </div>
+            <div class="md:hidden block mx-3 pt-10 ">
+              <div class="grid grid-cols-3 gap-3">
+                <div>
+                  <img src="assets/images/profile_pic.png" class="w-32" alt="">
+                </div>
+                <div class="col-span-2 font-roboto text-white justify-end flex-col flex">                  
+                  Lorem ipsum dolor sit amet,<br />
+                  consectetur adipiscing elit.<br />
+                  Aenean mi libero, faucibus<br />
+                  feugiat arcu sit amet, <br />
+                  rhoncus cras amet.
+                </div>
+                
+              </div>
+              <div class="font-roboto text-lg text-white text-center">
+                <p class="text-xl">Lorem Ipsum</p>
+                <p class="text-base">Lorem ipsum dolor sit.</p>
               </div>
             </div>
           </div>
@@ -848,7 +1040,7 @@
               </svg>
             </a></div>
         </div>
-        <div class="font-roboto text-4xl text-white border-t border-white border-opacity-50 my-12 py-10 text-center w-4/5 mx-auto">
+        <div class="font-roboto text-xl md:text-4xl text-white border-t border-white border-opacity-50 my-12 py-10 text-center w-4/5 mx-auto">
           Lorem ipsum dolor sit amet, <br/>consectetur adipiscing elit vel.
           <div class="w-full text-center mt-8">
             <button
@@ -865,20 +1057,20 @@
     <!--Footer-->
     <footer class="bg-footer bg-cover">
       <div class="container mx-auto px-2">
-        <div class="w-full grid grid-cols-8">
+        <div class="w-full md:grid grid-cols-8 hidden">
           <div class="flex-1 text-white border-r border-gray-400 py-8 side-menu">
             <ul class="list-reset mb-6">
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0 py-3 px-2 active">
-                <a href="#" class="no-underline hover:underline text-white ">Lorem Ipsum</a>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0 py-3 px-2 cursor-pointer active" onclick="handleBottomMenuClick(0)">
+                <a href="javascript:void(0)" class="no-underline hover:underline text-white ">Lorem Ipsum</a>
               </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0 py-3 px-2">
-                <a href="#" class="no-underline hover:underline text-white ">Lorem Ipsum</a>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0 py-3 px-2 cursor-pointer" onclick="handleBottomMenuClick(1)">
+                <a href="javascript:void(0)" class="no-underline hover:underline text-white ">Lorem Ipsum</a>
               </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0 py-3 px-2">
-                <a href="#" class="no-underline hover:underline text-white ">Lorem Ipsum</a>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0 py-3 px-2 cursor-pointer" onclick="handleBottomMenuClick(2)">
+                <a href="javascript:void(0)" class="no-underline hover:underline text-white ">Lorem Ipsum</a>
               </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0 py-3 px-2">
-                <a href="#" class="no-underline hover:underline text-white ">Lorem Ipsum</a>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0 py-3 px-2 cursor-pointer" onclick="handleBottomMenuClick(3)">
+                <a href="javascript:void(0)" class="no-underline hover:underline text-white ">Lorem Ipsum</a>
               </li>
              
             </ul>
@@ -956,29 +1148,108 @@
           </div>
           
         </div>
+        <div class="w-full md:hidden">
+          <div class="tab w-full overflow-hidden pt-4">
+            <input class="absolute opacity-0" id="tab-single-one" type="radio" name="tabs2">
+            <label class="block p-3 font-roboto text-xl leading-normal cursor-pointer text-center border border-gray-600 border-opacity-80" for="tab-single-one">Lorem</label>
+            <div class="tab-content overflow-hidden leading-normal">
+              <div class="flex-1 pl-6">
+                <ul class="list-reset mb-6">
+                  <li class="mt-2 mr-2 md:block md:mr-0 py-1">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                  </li>
+                  <li class="mt-2  mr-2 md:block md:mr-0 py-1">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                  </li>
+                  <li class="mt-2 mr-2 md:block md:mr-0 py-1">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab w-full overflow-hidden mt-2">
+              <input class="absolute opacity-0" id="tab-single-two" type="radio" name="tabs2">
+              <label class="block p-3 font-roboto text-xl leading-normal cursor-pointer text-center border border-gray-600 border-opacity-80" for="tab-single-two">Lorem</label>
+              <div class="tab-content overflow-hidden leading-normal">
+                <div class="flex-1 pl-6">
+                  <ul class="list-reset mb-6">
+                    <li class="mt-2 mr-2 md:block md:mr-0 py-1">
+                      <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                    </li>
+                    <li class="mt-2  mr-2 md:block md:mr-0 py-1">
+                      <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                    </li>
+                    <li class="mt-2 mr-2 md:block md:mr-0 py-1">
+                      <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+          <div class="tab w-full overflow-hidden mt-2">
+              <input class="absolute opacity-0" id="tab-single-three" type="radio" name="tabs2">
+              <label class="block p-3 font-roboto text-xl leading-normal cursor-pointer text-center border border-gray-600 border-opacity-80" for="tab-single-three">Lorem</label>
+              <div class="tab-content overflow-hidden leading-normal">
+                <div class="flex-1 pl-6">
+                  <ul class="list-reset mb-6">
+                    <li class="mt-2 mr-2 md:block md:mr-0 py-1">
+                      <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                    </li>
+                    <li class="mt-2  mr-2 md:block md:mr-0 py-1">
+                      <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                    </li>
+                    <li class="mt-2 mr-2 md:block md:mr-0 py-1">
+                      <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+  
+          <div class="tab w-full overflow-hidden my-2">
+            <input class="absolute opacity-0" id="tab-single-four" type="radio" name="tabs2">
+            <label class="block p-3 font-roboto text-xl leading-normal cursor-pointer text-center border border-gray-600 border-opacity-80" for="tab-single-four">Lorem</label>
+            <div class="tab-content overflow-hidden leading-normal">
+              <div class="flex-1 pl-6">
+                <ul class="list-reset mb-6">
+                  <li class="mt-2 mr-2 md:block md:mr-0 py-1">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                  </li>
+                  <li class="mt-2  mr-2 md:block md:mr-0 py-1">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                  </li>
+                  <li class="mt-2 mr-2 md:block md:mr-0 py-1">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Lorem Ipsum</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+        </div>
         
       </div>
       <div class="bottomGradient" style="height:1px"></div>
-      <div class="container mx-auto px-8 py-4">
-        <div class="w-full flex  justify-between align-middle">
-          <div class="flex items-center">
-            <a href="#" class="text-black bg-white ">BRANDING LOGO</a>&nbsp;&nbsp; <span> ©&nbsp;&nbsp;2021</span>
-          </div>
-          
-          <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li class="mr-3">
-              <a class="inline-block py-2 px-4 text-white hover:underline font-bold no-underline" href="#">Envelope</a>
+      <div class="container mx-auto px-3 py-4">
+        <div class="w-full md:flex  justify-between align-middle">
+          <ul class="list-reset flex justify-center md:justify-end flex-1 items-center order-1 md:order-2">
+            <li class="mr-2">
+              <a class="inline-block py-2 px-1 md:px-4 text-white hover:underline font-bold no-underline" href="#">Envelope</a>
             </li>
-            <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:underline hover:text-underline py-2 px-4" href="#">Twitter</a>
+            <li class="mr-2">
+              <a class="inline-block text-white no-underline hover:underline hover:text-underline py-2 px-1 md:px-4" href="#">Twitter</a>
             </li>
-            <li class="mr-3">
-              <a class="inline-block text-white no-underline hover:underline hover:text-underline py-2 px-4" href="#">Facebook</a>
+            <li class="mr-2">
+              <a class="inline-block text-white no-underline hover:underline hover:text-underline py-2 px-1 md:px-4" href="#">Facebook</a>
             </li>
-            <li class="mr-3">
-                <a class="inline-block text-white no-underline hover:underline hover:text-underline py-2 px-4" href="#">Linkedin-in</a>
+            <li class="mr-0">
+                <a class="inline-block text-white no-underline hover:underline hover:text-underline py-2 px-1 md:px-4" href="#">Linkedin-in</a>
               </li>
           </ul>
+          <div class="flex items-center justify-center md:justify-start order-2 md:order-1">
+            <a href="#" class="text-black bg-white ">BRANDING LOGO</a>&nbsp;&nbsp; <span> ©&nbsp;&nbsp;2021</span>
+          </div>
         </div>
         
       </div>
@@ -1069,14 +1340,47 @@
         }
         return false;
       }
+
+      const bottomSideMenuContanier = document.querySelector('.side-menu');
+      const bottomSideMenus = Array.from(document.querySelectorAll('.side-menu li'));
+      
+      function handleBottomMenuClick(index) {
+        const activeMenu = document.querySelector('.side-menu li.active');
+        const activeIndex = slides.indexOf(activeMenu);
+        
+        if( index === activeIndex) return;
+        activeMenu.classList.remove('active');
+        bottomSideMenus[index].classList.add('active');
+
+      }
+
+      // tabs collapse
+      var myRadios = document.getElementsByName('tabs2');
+      var setCheck;
+      var x = 0;
+      for(x = 0; x < myRadios.length; x++){
+          myRadios[x].onclick = function(){
+              if(setCheck != this){
+                   setCheck = this;
+              }else{
+                  this.checked = false;
+                  setCheck = null;
+          }
+          };
+      }
     </script>
     <script >
       const slider = document.querySelector('.slider');
-      const slides = Array.from(document.querySelectorAll('.slide'));
+      const slides = Array.from(document.querySelectorAll('.slider .slide'));
       const buttons = document.querySelectorAll('.buttons div');
+      const slides2 = Array.from(document.querySelectorAll('.slider2 .slide'));
+      const buttons2 = document.querySelectorAll('.slider2-buttons div');
+      const slides3 = Array.from(document.querySelectorAll('.slider3 .slide'));
+      const buttons3 = document.querySelectorAll('.slider3-buttons div');
+      
       console.log('slides length',slides.length)
       function getNextPrev() {
-          const activeSlide = document.querySelector('.slide.active');
+          const activeSlide = document.querySelector('.slider .slide.active');
           const activeIndex = slides.indexOf(activeSlide);
           let next, prev;
           if(activeIndex === slides.length - 1 ){
@@ -1094,7 +1398,7 @@
       }
 
       function getPosition() {
-          const activeSlide = document.querySelector('.slide.active');
+          const activeSlide = document.querySelector('.slider .slide.active');
           const activeIndex = slides.indexOf(activeSlide);
           const [next, prev] = getNextPrev();
 
@@ -1114,7 +1418,90 @@
               })
           })
       }
+
+      function getNextPrev2() {
+          const activeSlide = document.querySelector('.slider2 .slide.active');
+          const activeIndex = slides2.indexOf(activeSlide);
+          let next, prev;
+          if(activeIndex === slides2.length - 1 ){
+              next = slides2[0];
+          }else{
+              next = slides2[activeIndex + 1];
+          }
+
+          if(activeIndex === 0 ){
+              prev = slides2[slides2.length -1];
+          }else{
+              prev = slides2[activeIndex - 1];
+          }
+          return [next, prev];
+      }
+
+      function getPosition2() {
+          const activeSlide = document.querySelector('.slider2 .slide.active');
+          const activeIndex = slides2.indexOf(activeSlide);
+          const [next, prev] = getNextPrev2();
+
+          slides2.forEach((slide, index) => {
+              if(index === activeIndex) {
+                  slide.style.transform = 'translateX(0%)';
+              }else if(slide === prev){
+                  slide.style.transform = 'translateX(-125%)';
+              }else if(slide === next){
+                  slide.style.transform = 'translateX(125%)';
+              }else {
+                  slide.style.transform = 'translateX(125%)';
+              }
+
+              slide.addEventListener('transitionend', ()=>{
+                  slide.classList.remove('top');
+              })
+          })
+      }
+
+      function getNextPrev3() {
+          const activeSlide = document.querySelector('.slider3 .slide.active');
+          const activeIndex = slides3.indexOf(activeSlide);
+          let next, prev;
+          if(activeIndex === slides3.length - 1 ){
+              next = slides3[0];
+          }else{
+              next = slides3[activeIndex + 1];
+          }
+
+          if(activeIndex === 0 ){
+              prev = slides3[slides2.length -1];
+          }else{
+              prev = slides3[activeIndex - 1];
+          }
+          return [next, prev];
+      }
+
+      function getPosition3() {
+          const activeSlide = document.querySelector('.slider3 .slide.active');
+          const activeIndex = slides3.indexOf(activeSlide);
+          const [next, prev] = getNextPrev3();
+
+          slides3.forEach((slide, index) => {
+              if(index === activeIndex) {
+                  slide.style.transform = 'translateX(0%)';
+              }else if(slide === prev){
+                  slide.style.transform = 'translateX(-125%)';
+              }else if(slide === next){
+                  slide.style.transform = 'translateX(125%)';
+              }else {
+                  slide.style.transform = 'translateX(125%)';
+              }
+
+              slide.addEventListener('transitionend', ()=>{
+                  slide.classList.remove('top');
+              })
+          })
+      }
+
       getPosition();
+      getPosition2();
+      getPosition3();
 
       buttons.forEach(button => {
           button.addEventListener('click', ()=>{
@@ -1122,9 +1509,23 @@
               else if(button.classList.contains('prev')) getPrevSlide();
           })
       })
+      
+      buttons2.forEach(button => {
+          button.addEventListener('click', ()=>{
+              if(button.classList.contains('next')) getNextSlide2();
+              else if(button.classList.contains('prev')) getPrevSlide2();
+          })
+      })
+
+      buttons3.forEach(button => {
+          button.addEventListener('click', ()=>{
+              if(button.classList.contains('next')) getNextSlide3();
+              else if(button.classList.contains('prev')) getPrevSlide3();
+          })
+      })
 
       function getNextSlide(){
-          const current = document.querySelector('.slide.active');
+          const current = document.querySelector('.slider .slide.active');
           const [next, prev] = getNextPrev();
 
           if(current.classList.contains('top')){
@@ -1140,7 +1541,7 @@
       }
 
       function getPrevSlide(){
-          const current = document.querySelector('.slide.active');
+          const current = document.querySelector('.slider .slide.active');
           const [next, prev] = getNextPrev();
 
           if(current.classList.contains('top')){
@@ -1153,6 +1554,70 @@
           prev.classList.add('active');
           prev.style.transform = 'translate(0%)';
           getPosition();
+      }
+
+      function getNextSlide2(){
+          const current = document.querySelector('.slider2 .slide.active');
+          const [next, prev] = getNextPrev2();
+
+          if(current.classList.contains('top')){
+              return;
+          }
+          current.classList.add('top');
+          next.classList.add('top');
+          current.classList.remove('active');
+          current.style.transform = 'translate(-125%)';
+          next.classList.add('active');
+          next.style.transform = 'translate(0%)';
+          getPosition2();
+      }
+
+      function getPrevSlide2(){
+          const current = document.querySelector('.slider2 .slide.active');
+          const [next, prev] = getNextPrev2();
+
+          if(current.classList.contains('top')){
+              return;
+          }
+          current.classList.add('top');
+          prev.classList.add('top');
+          current.classList.remove('active');
+          current.style.transform = 'translate(125%)';
+          prev.classList.add('active');
+          prev.style.transform = 'translate(0%)';
+          getPosition2();
+      }
+
+      function getNextSlide3(){
+          const current = document.querySelector('.slider3 .slide.active');
+          const [next, prev] = getNextPrev3();
+
+          if(current.classList.contains('top')){
+              return;
+          }
+          current.classList.add('top');
+          next.classList.add('top');
+          current.classList.remove('active');
+          current.style.transform = 'translate(-125%)';
+          next.classList.add('active');
+          next.style.transform = 'translate(0%)';
+          getPosition3();
+      }
+
+      function getPrevSlide3(){
+          const current = document.querySelector('.slider3 .slide.active');
+          const [next, prev] = getNextPrev3();
+
+          if(current.classList.contains('top')){
+              return;
+          }
+          current.classList.add('top');
+          prev.classList.add('top');
+          current.classList.remove('active');
+          current.style.transform = 'translate(125%)';
+          prev.classList.add('active');
+          prev.style.transform = 'translate(0%)';
+          getPosition3();
       }
       // items.forEach((el) => {
       //     const minPerSlide = 4

@@ -1,9 +1,9 @@
 const slider = document.querySelector('.slider');
-const slides = Array.from(document.querySelectorAll('.slide'));
+const slides = Array.from(document.querySelectorAll('.slider .slide'));
 const buttons = document.querySelectorAll('.buttons div');
 console.log('slides length',slides.length)
 function getNextPrev() {
-    const activeSlide = document.querySelector('.slide.active');
+    const activeSlide = document.querySelector('.slider .slide.active');
     const activeIndex = slides.indexOf(activeSlide);
     let next, prev;
     if(activeIndex === slides.length - 1 ){
@@ -21,7 +21,7 @@ function getNextPrev() {
 }
 
 function getPosition() {
-    const activeSlide = document.querySelector('.slide.active');
+    const activeSlide = document.querySelector('.slider .slide.active');
     const activeIndex = slides.indexOf(activeSlide);
     const [next, prev] = getNextPrev();
 
@@ -51,7 +51,7 @@ buttons.forEach(button => {
 })
 
 function getNextSlide(){
-    const current = document.querySelector('.slide.active');
+    const current = document.querySelector('.slider .slide.active');
     const [next, prev] = getNextPrev();
 
     if(current.classList.contains('top')){
@@ -67,7 +67,7 @@ function getNextSlide(){
 }
 
 function getPrevSlide(){
-    const current = document.querySelector('.slide.active');
+    const current = document.querySelector('.slider .slide.active');
     const [next, prev] = getNextPrev();
 
     if(current.classList.contains('top')){

@@ -63,6 +63,10 @@ module.exports = {
       'footer': "url('assets/images/footer-bg.png')"
      },
      backgroundPosition: {
+       bottom: 'bottom',
+       top: 'top',
+       center: 'center',
+       'top-4': 'center top 1rem',
        'left-30': 'left 0px 30%'
      },
      fontFamily: {

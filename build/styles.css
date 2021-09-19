@@ -18847,6 +18847,22 @@ video {
           background-clip: text;
 }
 
+.bg-bottom {
+  background-position: bottom;
+}
+
+.bg-top {
+  background-position: top;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-top-4 {
+  background-position: center top 1rem;
+}
+
 .bg-left-30 {
   background-position: left 0px 30%;
 }
@@ -45805,6 +45821,22 @@ video {
             background-clip: text;
   }
 
+  .sm\:bg-bottom {
+    background-position: bottom;
+  }
+
+  .sm\:bg-top {
+    background-position: top;
+  }
+
+  .sm\:bg-center {
+    background-position: center;
+  }
+
+  .sm\:bg-top-4 {
+    background-position: center top 1rem;
+  }
+
   .sm\:bg-left-30 {
     background-position: left 0px 30%;
   }
@@ -72749,6 +72781,22 @@ video {
   .md\:bg-clip-text {
     -webkit-background-clip: text;
             background-clip: text;
+  }
+
+  .md\:bg-bottom {
+    background-position: bottom;
+  }
+
+  .md\:bg-top {
+    background-position: top;
+  }
+
+  .md\:bg-center {
+    background-position: center;
+  }
+
+  .md\:bg-top-4 {
+    background-position: center top 1rem;
   }
 
   .md\:bg-left-30 {
@@ -99697,6 +99745,22 @@ video {
             background-clip: text;
   }
 
+  .lg\:bg-bottom {
+    background-position: bottom;
+  }
+
+  .lg\:bg-top {
+    background-position: top;
+  }
+
+  .lg\:bg-center {
+    background-position: center;
+  }
+
+  .lg\:bg-top-4 {
+    background-position: center top 1rem;
+  }
+
   .lg\:bg-left-30 {
     background-position: left 0px 30%;
   }
@@ -126643,6 +126707,22 @@ video {
             background-clip: text;
   }
 
+  .xl\:bg-bottom {
+    background-position: bottom;
+  }
+
+  .xl\:bg-top {
+    background-position: top;
+  }
+
+  .xl\:bg-center {
+    background-position: center;
+  }
+
+  .xl\:bg-top-4 {
+    background-position: center top 1rem;
+  }
+
   .xl\:bg-left-30 {
     background-position: left 0px 30%;
   }
@@ -153587,6 +153667,22 @@ video {
   .\32xl\:bg-clip-text {
     -webkit-background-clip: text;
             background-clip: text;
+  }
+
+  .\32xl\:bg-bottom {
+    background-position: bottom;
+  }
+
+  .\32xl\:bg-top {
+    background-position: top;
+  }
+
+  .\32xl\:bg-center {
+    background-position: center;
+  }
+
+  .\32xl\:bg-top-4 {
+    background-position: center top 1rem;
   }
 
   .\32xl\:bg-left-30 {
