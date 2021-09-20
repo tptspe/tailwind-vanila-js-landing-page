@@ -121,6 +121,11 @@ footer .right-panel.active {
     color: #222D4C;
 }
 
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+}
+
 /* medium and up screens */
 @media (min-width: 768px) {
     
