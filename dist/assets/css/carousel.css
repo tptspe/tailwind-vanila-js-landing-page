@@ -97,6 +97,30 @@
     background-position-y: top;
 }
 
+footer .right-panel {
+    display: none;
+}
+
+footer .right-panel.active {
+    display: flex;
+}
+
+.owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.owl-prev, 
+.owl-next {
+    font-size: 1.5rem;
+    border: solid white 1px;
+    border-radius: 50px;
+    padding: 0 15px;
+    margin: 0 10px;
+    color: #222D4C;
+}
+
 /* medium and up screens */
 @media (min-width: 768px) {
     
